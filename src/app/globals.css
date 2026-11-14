@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Brand colours, taken from the logo: deep emerald and warm gold. */
+@theme {
+  --color-cream: #fbf8f1;
+  --color-ink: #1c2b24;
+
+  --color-brand-50: #eef6f1;
+  --color-brand-100: #d8eadf;
+  --color-brand-200: #b3d5c1;
+  --color-brand-600: #136b43;
+  --color-brand-700: #0f5132;
+  --color-brand-800: #0b3d27;
+  --color-brand-900: #082d1d;
+
+  --color-gold-100: #f7efd0;
+  --color-gold-400: #dcbc4a;
+  --color-gold-500: #c9a227;
+  --color-gold-600: #a8841c;
 }
 
+/* The Cairo font is loaded in layout.tsx and exposed as --font-cairo. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+/* ---------- Motion ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -22px, 0);
+  }
+}
+
+/* Each page fades in when you navigate to it (see app/template.tsx). */
+.animate-page {
+  animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-pop {
+  animation: pop-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.blob {
+  animation: float 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Sections slide up when they scroll into view (see components/Reveal.tsx). */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-page,
+  .fade-up,
+  .animate-pop,
+  .blob {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

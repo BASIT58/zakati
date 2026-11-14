@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "lastReviewed": "2026-11-14",
+    "currency": "EGP",
+    "authority": "دار الإفتاء المصرية"
+  },
+  "nisab": {
+    "goldGrams": 85,
+    "goldKarat": 21,
+    "silverGrams": 595
+  },
+  "rate": {
+    "numerator": 25,
+    "denominator": 1000,
+    "percent": 2.5,
+    "label": "ربع العشر (2.5%)"
+  },
+  "sources": {
+    "nisabKarat21": {
+      "title": "السبب في تقدير النصاب في زكاة المال على اعتبار عيار 21 وليس 18 أو 24",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/21692/",
+      "fatwaNo": "8426",
+      "verified": true
+    },
+    "moneyNisab": {
+      "title": "نصاب زكاة المال بالعملة المصرية",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/16827",
+      "fatwaNo": "6203",
+      "verified": true
+    },
+    "conditions": {
+      "title": "كيفية حساب زكاة القرض (شروط وجوب الزكاة ومنها الخلو من الدين)",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/14460",
+      "fatwaNo": "4399",
+      "verified": true
+    },
+    "lentMoney": {
+      "title": "حكم زكاة المال المقتَرض",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/23878/",
+      "fatwaNo": "8906",
+      "verified": true
+    },
+    "debtDeduction": {
+      "title": "مذاهب الفقهاء في خصم الدين عند حساب الزكاة",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/15928/",
+      "verified": false
+    },
+    "adornment": {
+      "title": "حكم الزكاة على الذهب المشترى للزينة",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/12328",
+      "fatwaNo": "3171",
+      "verified": true
+    },
+    "adornmentWomen": {
+      "title": "حكم زكاة الذهب الذي تتخذه المرأة للزينة",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/22484/",
+      "verified": false
+    },
+    "trade": {
+      "title": "شروط وجوب الزكاة في عروض التجارة",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/19842/",
+      "fatwaNo": "8115",
+      "verified": true
+    },
+    "stocksTrading": {
+      "title": "زكاة الأسهم",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/13528/",
+      "fatwaNo": "3966",
+      "verified": true
+    },
+    "stocksInvested": {
+      "title": "كيفية حساب الزكاة على المال المستثمر في الأسهم",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/22181/",
+      "verified": false
+    },
+    "rental": {
+      "title": "زكاة المال المتحصل من إيجار العقارات",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/16268/",
+      "fatwaNo": "5577",
+      "verified": true
+    },
+    "salary": {
+      "title": "حكم الزكاة على المرتب الشهري",
+      "url": "https://www.dar-alifta.org/ar/fatwa/details/15598/",
+      "fatwaNo": "4975",
+      "verified": true
+    },
+    "service": {
+      "title": "فتاوى الحساب الشرعي والمواريث والزكاة (خدمة حساب الزكاة)",
+      "url": "https://www.dar-alifta.org/ar/services/details/8",
+      "verified": false
+    }
+  }
+}
